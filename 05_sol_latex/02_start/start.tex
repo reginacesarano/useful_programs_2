@@ -1,0 +1,159 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem, pifont}
+\usepackage{amssymb}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+\newlist{todolist}{itemize}{1}
+\setlist[todolist]{label=$\square$}
+
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large \cmark}}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large \xmark}}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{pythonstyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,                 
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showstringspaces=false,
+    tabsize=4
+}
+
+\lstset{style=pythonstyle}
+
+\title{2026 Formula 1 Season}
+
+
+\begin{document}
+
+\maketitle
+
+\section{World Champions}
+\subsubsection{2026 Title:}
+Lando Norris won the WDC in the 2025 season.
+\subsection{2027 Title}
+Kimi Antonelli won the WDC in the 2026 season.
+
+\textbf{At the Mexico Grand Prix, Kimi Antonelli was officially crowned as the Champion of this season}
+
+\textit{As expected, Max Verstappen showed the fans during the Singapore GP that he still needs to be taken into account and proved it again with his P21-P2 climb last weekend}, even though he is out of contention for the first time since 5 years.
+
+The Sao Paulo Grand Prix delivered a rather interesting Qualifying Session, \sout{with the worst cars of the grid} with some surprising cars in Q3 - the Haas and the Aston Martin.
+\section{Calendar}
+Races still left as of now:
+\begin{itemize}
+    \item Las Vegas
+    \item Qatar
+    \item Abu Dhabi
+\end{itemize}
+\section{Standings}
+Even though both the WDC and WCC are decided, these are the current standings:
+
+\subsection{Current WDC standings:}
+\begin{enumerate}
+    \item Kimi Antonelli
+    \item Max Verstappen
+    \item George Russell
+    \item Lewis Hamilton
+    \item Charles Leclerc
+    \item Lando Norris
+    \item Oscar Piastri
+    \item Isack Hadjar
+    \item Liam Lawson
+    \item Pierre Gasly
+\end{enumerate}
+
+\subsection{Top 3 WCC standings}
+The up to date WCC standings can be seen in Table~\ref{tab:data}.
+
+\begin{table}[h]
+       \centering
+
+    \begin{tabular}{c c}
+        \hline
+        Team & Points \\
+        \hline
+        Mercedes & 652 \\
+        Ferrari & 510 \\
+        Red Bull Racing & 415 \\
+        \hline
+    \end{tabular}
+
+    \caption{WCC standings.}
+    \label{tab:data}
+\end{table}
+
+\section{Surprises}
+Surprising events this season:
+\begin{todolist}
+    \item[\done] Ferrari mistake turned to upgrade
+    \item[\done] Lando back-to-back win (Sao Paulo GP)
+    \item[\done] George Russell Grand Slam
+    \item[\wontfix] midfield team podium
+    \item[\wontfix] Double DSQ
+    \item[\done] 3 DNFs at home races
+    \item[\done] Youngest WDC record beat
+\end{todolist}
+
+\section{Other}
+Find more at: \href{http://colab.research.google.com/}{Google Colab}
+
+If a driver finishes P5 in all races, his number of points will be:
+\begin{lstlisting}[language=Python]
+x = 10
+y = 23 * x
+print(y)
+\end{lstlisting}
+
+\section{Physics in Motorsport}
+Frictional force:
+\[
+F_{\text{friction}} = \mu \cdot R_{\text{car}}
+\]
+
+Simple formula for speed:
+\[
+v = \frac{s}{t}
+\]
+
+Kinetic energy for constant velocity:
+\[
+E_{k} = \frac{1}{2} M_{\text{car}} v^{2}
+\]
+
+Centripetal force acting on the car driving on a circle/curve:
+\[
+F_{\text{Cen}} = \frac{M_{\text{car}} v^{2}}{r_{\text{corner}}}
+\]
+
+Maximum cornering force of the tires:
+\[
+F_{\text{max}} = \sqrt{\mu_{\text{track}} g M_{\text{car}}}
+\]
+
+Maximum cornering speed:
+\[
+v_{\text{max}} = \sqrt{\mu_{\text{track}} r_{\text{corner}} g}
+\]
+\includegraphics[width=\linewidth]{wykres.png}
+
+\end{document}
